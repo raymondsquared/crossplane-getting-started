@@ -70,3 +70,17 @@
       ```sh
       make crossplane-provider-aws-config
       ```
+
+5.  Create a managed resource
+
+    - Create an s3 bucket
+
+      ```sh
+      make crossplane-aws-bucket
+      ```
+
+    - verify Crossplane created the bucket
+
+      ```sh
+      kubectl get buckets
+      ```

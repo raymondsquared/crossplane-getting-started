@@ -37,4 +37,7 @@ crossplane-provider-aws-install:
 .PHONY: crossplane-provider-aws-config
 crossplane-provider-aws-config:
 	./aws-provider-config.sh
-	
+
+.PHONY: crossplane-aws-bucket
+crossplane-aws-bucket:
+	./aws-resource-bucket.sh
