@@ -31,6 +31,10 @@ crossplane-install: crossplane-install-repo
 	--create-namespace
 
 .PHONY: crossplane-provider-aws-install
-make crossplane-provider-aws-install:
+crossplane-provider-aws-install:
 	./aws-provider.sh
+	
+.PHONY: crossplane-provider-aws-config
+crossplane-provider-aws-config:
+	./aws-provider-config.sh
 	

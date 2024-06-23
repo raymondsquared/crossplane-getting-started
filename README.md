@@ -62,3 +62,11 @@
       ```sh
       kubectl describe secret aws-secret -n crossplane-system
       ```
+
+4.  Create a ProviderConfig
+
+    - Create a ProviderConfig
+
+      ```sh
+      make crossplane-provider-aws-config
+      ```
