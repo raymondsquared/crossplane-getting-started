@@ -84,3 +84,11 @@
       ```sh
       kubectl get buckets
       ```
+
+6.  Delete a managed resource
+
+    - Delete an s3 bucket
+
+      ```sh
+      kubectl delete bucket crossplane-bucket-xxxx
+      ```
