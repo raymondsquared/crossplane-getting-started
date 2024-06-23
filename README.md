@@ -19,18 +19,32 @@
 
 ## Usage
 
-1. **Install Crossplane**:
+1.  **Install Crossplane**:
 
-   - Enable the Crossplane Helm Chart repository::
+    - Enable the Crossplane Helm Chart repository::
 
-     ```sh
-     make crossplane-install
-     ```
+      ```sh
+      make crossplane-install
+      ```
 
-   - Verify Crossplane installed with kubectl get pods:
+    - Verify Crossplane installed with kubectl get pods:
 
-     ```sh
-     kubectl get pods -n crossplane-system
-     
-     kubectl api-resources | grep crossplane.
-     ```
+      ```sh
+      kubectl get pods -n crossplane-system
+
+      kubectl api-resources | grep crossplane.
+      ```
+
+2.  **Install the AWS provider**:
+
+    - Install the AWS provider:
+
+      ```sh
+      make crossplane-provider-aws-install
+      ```
+
+    - Verify the provider installed with:
+
+      ```sh
+      kubectl get providers
+      ```

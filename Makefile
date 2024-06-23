@@ -22,3 +22,8 @@ crossplane-install: crossplane-install-repo
 	crossplane-stable/crossplane \
 	--namespace crossplane-system \
 	--create-namespace
+
+.PHONY: crossplane-provider-aws-install
+make crossplane-provider-aws-install:
+	./aws-provider.sh
+	
