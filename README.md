@@ -16,3 +16,21 @@
    ```sh
    make kube-start
    ```
+
+## Usage
+
+1. **Install Crossplane**:
+
+   - Enable the Crossplane Helm Chart repository::
+
+     ```sh
+     make crossplane-install
+     ```
+
+   - Verify Crossplane installed with kubectl get pods:
+
+     ```sh
+     kubectl get pods -n crossplane-system
+     
+     kubectl api-resources | grep crossplane.
+     ```

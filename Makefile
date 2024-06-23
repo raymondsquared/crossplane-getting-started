@@ -9,3 +9,16 @@ kube-list:
 .PHONY: kube-stop
 kube-stop:
 	minikube stop
+
+.PHONY: crossplane-install-repo
+crossplane-install-repo:
+	helm repo add \
+	crossplane-stable https://charts.crossplane.io/stable
+	helm repo update
+
+.PHONY: crossplane-install
+crossplane-install: crossplane-install-repo
+	helm install crossplane \
+	crossplane-stable/crossplane \
+	--namespace crossplane-system \
+	--create-namespace
