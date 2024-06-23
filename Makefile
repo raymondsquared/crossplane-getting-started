@@ -10,6 +10,13 @@ kube-list:
 kube-stop:
 	minikube stop
 
+.PHONY: kube-secret-create-aws
+kube-secret-create-aws:
+	kubectl create secret \
+	generic aws-secret \
+	-n crossplane-system \
+	--from-file=creds=./aws-credentials.txt
+
 .PHONY: crossplane-install-repo
 crossplane-install-repo:
 	helm repo add \

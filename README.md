@@ -48,3 +48,17 @@
       ```sh
       kubectl get providers
       ```
+
+3.  Create a Kubernetes secret with the AWS credentials
+
+    - Create a Kubernetes secret with the AWS credentials:
+
+      ```sh
+      make kube-secret-create-aws
+      ```
+
+    - View the secret with:
+
+      ```sh
+      kubectl describe secret aws-secret -n crossplane-system
+      ```
